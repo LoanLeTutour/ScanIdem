@@ -1,6 +1,7 @@
 import { TouchableOpacity, View, Text, Image } from "react-native";
-import styles from "./PhotoCard.styles";
 import { Ionicons } from "@expo/vector-icons";
+
+import styles from "./PhotoCard.styles";
 import Colors from "@/constants/Colors";
 
 const PhotoCard = () => {

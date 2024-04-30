@@ -1,8 +1,8 @@
 import { UseWarmUpBrowser } from '@/hooks/UseWarmUpBrowser';
-import {useState} from 'react';
-import {View, Text, Image, TextInput, TouchableOpacity, StatusBar} from 'react-native';
+import {useState, useEffect} from 'react';
+import {View, Text, Image, TextInput, TouchableOpacity} from 'react-native';
 import { useSignIn } from '@clerk/clerk-expo';
-import { Redirect, useRouter } from 'expo-router';
+import { useRouter, useNavigation } from 'expo-router';
 
 import styles from './index.styles';
 
@@ -27,6 +27,7 @@ const LogIn= () => {
             setMailPlaceholder('Entrez votre adresse mail');
             return false;
         }
+        return true;
     };
 
     const checkPasswordInput= () => {
@@ -34,6 +35,7 @@ const LogIn= () => {
             setPasswordPlaceholder('Entrez votre mot de passe');
             return false;
         }
+        return true;
     };
     const onSignInPress = async () => {
         if (!isLoaded) {
@@ -52,8 +54,14 @@ const LogIn= () => {
         console.log(err, "login erreur");
         }
   };
+  const navigation = useNavigation();
+
+  useEffect(() => {
+    navigation.setOptions({ headerShown: false });
+  }, [navigation]);
 
     return(
+        
             <View style={styles.container}>
             <Image 
                 style={styles.logo}
@@ -77,7 +85,7 @@ const LogIn= () => {
                 secureTextEntry={true}
                 onChangeText={(password: string) => setPassword(password)}
             />
-            <TouchableOpacity style={styles.btn} onPress={checkInputs}>
+            <TouchableOpacity style={styles.btn} onPress={onSignInPress}>
                 <Text style={styles.btnText}>Connexion</Text>
             </TouchableOpacity>
             </View>

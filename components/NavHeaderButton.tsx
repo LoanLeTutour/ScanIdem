@@ -1,7 +1,8 @@
-import Colors from "@/constants/Colors";
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
 import { TouchableOpacity } from "react-native";
+
+import Colors from "@/constants/Colors";
 
 const NavHeaderButton = (icon: string) => {
     const router = useRouter();

@@ -9,14 +9,11 @@ const TabLayout = () => {
     return(
         <Tabs screenOptions={{
             tabBarActiveTintColor: Colors.primary,
-            tabBarLabelStyle:{
-                fontFamily: 'mon-b'
-            }
         }}>
             <Tabs.Screen name='photo' options={{
                 title: 'Photo',
                 headerStyle: { backgroundColor: Colors.primary },
-                headerTitleStyle:{color: Colors.white},
+                headerTitleStyle:{color: Colors.white, textAlign: 'center'},
                 tabBarLabel: 'Photo',
                 tabBarStyle: {backgroundColor: Colors.black },
                 tabBarIcon: ({color, size}) => 
@@ -27,7 +24,7 @@ const TabLayout = () => {
             <Tabs.Screen name='history' options={{
                 title: 'Historique',
                 headerStyle: { backgroundColor: Colors.primary },
-                headerTitleStyle:{color: Colors.white},
+                headerTitleStyle:{color: Colors.white, textAlign: 'center'},
                 tabBarStyle: {backgroundColor: Colors.black },
                 tabBarLabel: 'Historique',
                 tabBarIcon: ({color, size}) => 

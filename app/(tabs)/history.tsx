@@ -1,8 +1,6 @@
-import { useAuth } from "@clerk/clerk-expo";
-import { Link } from "expo-router";
 import React from "react";
-import { View, Text, Button, ScrollView } from "react-native";
-import SignOutTouchable from "@/components/SignOutTouchable";
+import { View, ScrollView } from "react-native";
+
 import styles from "../(tabs)styles/history.styles";
 import PhotoCard from "@/components/PhotoCard";
 
