@@ -70,7 +70,7 @@ const LogIn= () => {
             />
             <TextInput 
                 autoCapitalize='none' 
-                inputMode='text'
+                keyboardType='email-address'
                 style={styles.inputField} 
                 placeholder={mailPlaceholder}
                 value={emailAddress}
@@ -79,6 +79,7 @@ const LogIn= () => {
             <TextInput 
                 autoCapitalize='none' 
                 inputMode='text'
+                keyboardType='default'
                 style={styles.inputField} 
                 placeholder={passwordPlaceholder}
                 value={password}

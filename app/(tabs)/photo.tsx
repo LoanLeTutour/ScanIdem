@@ -69,7 +69,7 @@ const Page = () => {
 
   const toggleCameraType = () => {
     setType((current) =>
-      current === CameraType.back ? CameraType.front : CameraType.back
+      (current === CameraType.back) ? CameraType.front : CameraType.back
     );
   };
 
@@ -118,6 +118,16 @@ const Page = () => {
     }
   };
 
+  const displayTakePictureButton = () => {
+    return(
+            <View style={styles.capturingButtonContainer}>
+              <TouchableOpacity
+                style={styles.capturingButton}
+                onPress={takeAPicture}
+              />
+            </View>)
+  }
+
   const removeImage = () => {
     setImage("");
   };
@@ -155,6 +165,7 @@ const Page = () => {
         ref={cameraRef}
         autoFocus={true}
         ratio="16:9"
+        onCameraReady={displayTakePictureButton}
       >
         <View style={styles.buttonsContainer}>
           <View style={styles.topButtonsContainer}>
@@ -166,12 +177,7 @@ const Page = () => {
             </TouchableOpacity>
           </View>
           <View style={styles.bottomButtonsContainer}>
-            <View style={styles.capturingButtonContainer}>
-              <TouchableOpacity
-                style={styles.capturingButton}
-                onPress={takeAPicture}
-              />
-            </View>
+            {displayTakePictureButton()}
             <View>
               <TouchableOpacity
                 style={styles.uploadingButton}
