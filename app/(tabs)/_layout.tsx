@@ -12,10 +12,10 @@ const TabLayout = () => {
         }}>
             <Tabs.Screen name='photo' options={{
                 title: 'Photo',
-                headerStyle: { backgroundColor: Colors.primary },
-                headerTitleStyle:{color: Colors.white, textAlign: 'center'},
+                headerStyle: { backgroundColor: Colors.white },
+                headerTitleStyle:{color: Colors.secondary, textAlign: 'center', fontWeight: 'bold'},
                 tabBarLabel: 'Photo',
-                tabBarStyle: {backgroundColor: Colors.black },
+                tabBarStyle: {backgroundColor: Colors.white },
                 tabBarIcon: ({color, size}) => 
                     <Ionicons name="camera-sharp" color={color} size={size}/>,
                 headerRight: () => NavHeaderButton("images"),
@@ -23,9 +23,9 @@ const TabLayout = () => {
             />
             <Tabs.Screen name='history' options={{
                 title: 'Historique',
-                headerStyle: { backgroundColor: Colors.primary },
-                headerTitleStyle:{color: Colors.white, textAlign: 'center'},
-                tabBarStyle: {backgroundColor: Colors.black },
+                headerStyle: { backgroundColor: Colors.white },
+                headerTitleStyle:{color: Colors.secondary, textAlign: 'center', fontWeight: 'bold'},
+                tabBarStyle: {backgroundColor: Colors.white },
                 tabBarLabel: 'Historique',
                 tabBarIcon: ({color, size}) => 
                     <Ionicons name="images" color={color} size={size}/>,

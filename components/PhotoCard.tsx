@@ -18,19 +18,26 @@ const PhotoCard = () => {
             </View>
             <View style={styles.infoContainer}>
                 <Text style={styles.text}>18 Janvier 2024  </Text>
-                <Text style={styles.text}>Idem</Text>
-                <Text style={styles.text}>SwissKrono K-101-PE</Text>
-                <Text style={styles.text}>Fiabilité : 67%</Text>
+                <View style={styles.idemContainer}>
+                <Text style={styles.text}>SwissKrono</Text>
+                <Text style={styles.text}>K-101-PE</Text>
+                <Text style={styles.text}>Fiable à 67%</Text>
+                <Image 
+                resizeMode="cover"
+                style={styles.imageInfo}
+                source={require('../assets/images/icon.png')}
+                />
+                </View>
             </View>
             </View>
             <View style={styles.buttonContainer}>
-                <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>Résultats</Text>
-                    <Ionicons name="arrow-forward-circle" color={Colors.primary} size={30}/>
+                <TouchableOpacity style={[styles.button, {width: '65%'}]}>
+                    <Text style={styles.buttonText}>Voir détails</Text>
+                    <Ionicons name="arrow-forward-circle" color={Colors.white} size={30}/>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button}>
+                <TouchableOpacity style={[styles.button, {width: '30%'}]}>
                     <Text style={styles.buttonText}>Supprimer</Text>
-                    <Ionicons name="trash" color={Colors.primary} size={30}/>
+                    <Ionicons name="trash" color={Colors.white} size={30}/>
                 </TouchableOpacity>
             </View>
         </View>

@@ -7,11 +7,11 @@ import PhotoCard from "@/components/PhotoCard";
 const Page = () => {
   return (
     <View style={styles.background}>
-        <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
-        <PhotoCard/>
-        <PhotoCard/>
-        <PhotoCard/>
-        </ScrollView>
+      <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+        <PhotoCard />
+        <PhotoCard />
+        <PhotoCard />
+      </ScrollView>
     </View>
   );
 };

@@ -17,7 +17,7 @@ const SignOutTouchable = () => {
         <TouchableOpacity
           onPress={() => signOut()}
         >
-            <Ionicons name='log-out' color={Colors.white} size={30} style={{marginHorizontal: 10}}/>
+            <Ionicons name='log-out' color={Colors.secondary} size={30} style={{marginHorizontal: 10}}/>
         </TouchableOpacity>
     );
   };

@@ -4,7 +4,7 @@ import { StyleSheet } from "react-native"
 const styles = StyleSheet.create({
     container: {
         flex:1,
-        backgroundColor: Colors.primary,
+        backgroundColor: Colors.white,
         alignItems: 'center',
     },
     containerPermission: {
@@ -33,8 +33,7 @@ const styles = StyleSheet.create({
     },
     camera: {
         flex:1,
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
+        borderRadius: 20,
         padding: 20,
     },
     topButtonsContainer:{

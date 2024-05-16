@@ -16,7 +16,7 @@ const NavHeaderButton = (icon: string) => {
     }
     return (
         <TouchableOpacity onPress={toggleTab}>
-            <Ionicons name={icon} color={Colors.white} size={30}  style={{marginHorizontal: 10}}/>
+            <Ionicons name={icon} color={Colors.primary} size={30}  style={{marginHorizontal: 20}}/>
         </TouchableOpacity>
     )
 };
